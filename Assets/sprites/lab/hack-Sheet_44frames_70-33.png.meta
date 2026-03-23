@@ -1,0 +1,1562 @@
+fileFormatVersion: 2
+guid: bedda1a1a2f9cf947b184b984bca472f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2798166635509709735
+    second: hack-Sheet_44frames_70-33_0
+  - first:
+      213: -1478913246319167481
+    second: hack-Sheet_44frames_70-33_1
+  - first:
+      213: 8000127134254136587
+    second: hack-Sheet_44frames_70-33_2
+  - first:
+      213: -258955056015867533
+    second: hack-Sheet_44frames_70-33_3
+  - first:
+      213: 6384666512349197169
+    second: hack-Sheet_44frames_70-33_4
+  - first:
+      213: 6907896305597530045
+    second: hack-Sheet_44frames_70-33_5
+  - first:
+      213: -2361189732109694095
+    second: hack-Sheet_44frames_70-33_6
+  - first:
+      213: -1546793358615655523
+    second: hack-Sheet_44frames_70-33_7
+  - first:
+      213: 2602557234090989734
+    second: hack-Sheet_44frames_70-33_8
+  - first:
+      213: 8001009163704979340
+    second: hack-Sheet_44frames_70-33_9
+  - first:
+      213: 2077363715536742727
+    second: hack-Sheet_44frames_70-33_10
+  - first:
+      213: -3595368194606776610
+    second: hack-Sheet_44frames_70-33_11
+  - first:
+      213: 3474098001612417495
+    second: hack-Sheet_44frames_70-33_12
+  - first:
+      213: -8547397891672699750
+    second: hack-Sheet_44frames_70-33_13
+  - first:
+      213: -7124305361720970513
+    second: hack-Sheet_44frames_70-33_14
+  - first:
+      213: 3272167097101121027
+    second: hack-Sheet_44frames_70-33_15
+  - first:
+      213: 4703225062751011563
+    second: hack-Sheet_44frames_70-33_16
+  - first:
+      213: -565780768507820587
+    second: hack-Sheet_44frames_70-33_17
+  - first:
+      213: 6730393356297698318
+    second: hack-Sheet_44frames_70-33_18
+  - first:
+      213: -1971236061633720850
+    second: hack-Sheet_44frames_70-33_19
+  - first:
+      213: 986454266897476226
+    second: hack-Sheet_44frames_70-33_20
+  - first:
+      213: 1360918400537672915
+    second: hack-Sheet_44frames_70-33_21
+  - first:
+      213: 3832509724949149254
+    second: hack-Sheet_44frames_70-33_22
+  - first:
+      213: -3644847466244810858
+    second: hack-Sheet_44frames_70-33_23
+  - first:
+      213: 6554756520879960728
+    second: hack-Sheet_44frames_70-33_24
+  - first:
+      213: -4692078819728364803
+    second: hack-Sheet_44frames_70-33_25
+  - first:
+      213: -2346067609003762674
+    second: hack-Sheet_44frames_70-33_26
+  - first:
+      213: 1199658077560319413
+    second: hack-Sheet_44frames_70-33_27
+  - first:
+      213: -6329114788698624237
+    second: hack-Sheet_44frames_70-33_28
+  - first:
+      213: 3103460020141017546
+    second: hack-Sheet_44frames_70-33_29
+  - first:
+      213: 4079491050174343687
+    second: hack-Sheet_44frames_70-33_30
+  - first:
+      213: 8969080613696582027
+    second: hack-Sheet_44frames_70-33_31
+  - first:
+      213: -9214385760013738291
+    second: hack-Sheet_44frames_70-33_32
+  - first:
+      213: -7199593131926569010
+    second: hack-Sheet_44frames_70-33_33
+  - first:
+      213: 3350173761172444265
+    second: hack-Sheet_44frames_70-33_34
+  - first:
+      213: 2777587771611002731
+    second: hack-Sheet_44frames_70-33_35
+  - first:
+      213: -8168875832193009041
+    second: hack-Sheet_44frames_70-33_36
+  - first:
+      213: -4218177939724713362
+    second: hack-Sheet_44frames_70-33_37
+  - first:
+      213: 7127234860121059284
+    second: hack-Sheet_44frames_70-33_38
+  - first:
+      213: 7762998457597841892
+    second: hack-Sheet_44frames_70-33_39
+  - first:
+      213: -3538812051687791856
+    second: hack-Sheet_44frames_70-33_40
+  - first:
+      213: -8045522542019683836
+    second: hack-Sheet_44frames_70-33_41
+  - first:
+      213: 7876119675466511153
+    second: hack-Sheet_44frames_70-33_42
+  - first:
+      213: -4518475687059031408
+    second: hack-Sheet_44frames_70-33_43
+  - first:
+      213: -5407436559645763458
+    second: hack-Sheet_44frames_70-33_44
+  - first:
+      213: -2923694026356618913
+    second: hack-Sheet_44frames_70-33_45
+  - first:
+      213: 1674535626808973472
+    second: hack-Sheet_44frames_70-33_46
+  - first:
+      213: -6264258995503740037
+    second: hack-Sheet_44frames_70-33_47
+  - first:
+      213: -1010244985722607825
+    second: hack-Sheet_44frames_70-33_48
+  - first:
+      213: 3041136068541032352
+    second: hack-Sheet_44frames_70-33_49
+  - first:
+      213: -263284466123393336
+    second: hack-Sheet_44frames_70-33_50
+  - first:
+      213: -1707610805660318299
+    second: hack-Sheet_44frames_70-33_51
+  - first:
+      213: 7426137901933613209
+    second: hack-Sheet_44frames_70-33_52
+  - first:
+      213: -1118764895908696000
+    second: hack-Sheet_44frames_70-33_53
+  - first:
+      213: 4912665758120155050
+    second: hack-Sheet_44frames_70-33_54
+  - first:
+      213: -4445389883174757207
+    second: hack-Sheet_44frames_70-33_55
+  - first:
+      213: -1735624838631776981
+    second: hack-Sheet_44frames_70-33_56
+  - first:
+      213: -6486180765180322738
+    second: hack-Sheet_44frames_70-33_57
+  - first:
+      213: 2586720538576651292
+    second: hack-Sheet_44frames_70-33_58
+  - first:
+      213: 4342829625185437045
+    second: hack-Sheet_44frames_70-33_59
+  - first:
+      213: 4083309703130721767
+    second: hack-Sheet_44frames_70-33_60
+  - first:
+      213: -796409733058898775
+    second: hack-Sheet_44frames_70-33_61
+  - first:
+      213: -2702607528019557023
+    second: hack-Sheet_44frames_70-33_62
+  - first:
+      213: 8122461055599975319
+    second: hack-Sheet_44frames_70-33_63
+  - first:
+      213: 7284994668582256331
+    second: hack-Sheet_44frames_70-33_64
+  - first:
+      213: -5805828037864532235
+    second: hack-Sheet_44frames_70-33_65
+  - first:
+      213: -2827181661305548277
+    second: hack-Sheet_44frames_70-33_66
+  - first:
+      213: -542934245155107500
+    second: hack-Sheet_44frames_70-33_67
+  - first:
+      213: 6515718393267278037
+    second: hack-Sheet_44frames_70-33_68
+  - first:
+      213: 1317650405812424121
+    second: hack-Sheet_44frames_70-33_69
+  - first:
+      213: -6980841539216544606
+    second: hack-Sheet_44frames_70-33_70
+  - first:
+      213: 5486975216783917494
+    second: hack-Sheet_44frames_70-33_71
+  - first:
+      213: 2141837713930378733
+    second: hack-Sheet_44frames_70-33_72
+  - first:
+      213: 964664824935519491
+    second: hack-Sheet_44frames_70-33_73
+  - first:
+      213: 6295782274246719041
+    second: hack-Sheet_44frames_70-33_74
+  - first:
+      213: 565608809240249917
+    second: hack-Sheet_44frames_70-33_75
+  - first:
+      213: -1813053790069513322
+    second: hack-Sheet_44frames_70-33_76
+  - first:
+      213: -1092982130215560026
+    second: hack-Sheet_44frames_70-33_77
+  - first:
+      213: -7347174149304885626
+    second: hack-Sheet_44frames_70-33_78
+  - first:
+      213: 4383679341089815056
+    second: hack-Sheet_44frames_70-33_79
+  - first:
+      213: -3872680152624959932
+    second: hack-Sheet_44frames_70-33_80
+  - first:
+      213: -3958734733533914527
+    second: hack-Sheet_44frames_70-33_81
+  - first:
+      213: -1358330601061263242
+    second: hack-Sheet_44frames_70-33_82
+  - first:
+      213: -4794005364234111328
+    second: hack-Sheet_44frames_70-33_83
+  - first:
+      213: 800511654286952489
+    second: hack-Sheet_44frames_70-33_84
+  - first:
+      213: 8156572894019029976
+    second: hack-Sheet_44frames_70-33_85
+  - first:
+      213: 8012065050640096002
+    second: hack-Sheet_44frames_70-33_86
+  - first:
+      213: 6912656091002460164
+    second: hack-Sheet_44frames_70-33_87
+  - first:
+      213: 507015448111502212
+    second: hack-Sheet_44frames_70-33_88
+  - first:
+      213: 4738627290538068513
+    second: hack-Sheet_44frames_70-33_89
+  - first:
+      213: -7855687033082473233
+    second: hack-Sheet_44frames_70-33_90
+  - first:
+      213: 2539212147863486160
+    second: hack-Sheet_44frames_70-33_91
+  - first:
+      213: -1695671112285394235
+    second: hack-Sheet_44frames_70-33_92
+  - first:
+      213: -2931468436337296576
+    second: hack-Sheet_44frames_70-33_93
+  - first:
+      213: 3861404588812374765
+    second: hack-Sheet_44frames_70-33_94
+  - first:
+      213: -9164730585586298388
+    second: hack-Sheet_44frames_70-33_95
+  - first:
+      213: 5678299842867561423
+    second: hack-Sheet_44frames_70-33_96
+  - first:
+      213: -982785995286880197
+    second: hack-Sheet_44frames_70-33_97
+  - first:
+      213: -5149328118513692438
+    second: hack-Sheet_44frames_70-33_98
+  - first:
+      213: -6893344001344924323
+    second: hack-Sheet_44frames_70-33_99
+  - first:
+      213: 3358211300077110644
+    second: hack-Sheet_44frames_70-33_100
+  - first:
+      213: 4968250532880609421
+    second: hack-Sheet_44frames_70-33_101
+  - first:
+      213: -1286819588342865973
+    second: hack-Sheet_44frames_70-33_102
+  - first:
+      213: -2871194044373271305
+    second: hack-Sheet_44frames_70-33_103
+  - first:
+      213: 255943325836834233
+    second: hack-Sheet_44frames_70-33_104
+  - first:
+      213: -637352031059704331
+    second: hack-Sheet_44frames_70-33_105
+  - first:
+      213: -3911343657743088089
+    second: hack-Sheet_44frames_70-33_106
+  - first:
+      213: -7786865987074773251
+    second: hack-Sheet_44frames_70-33_107
+  - first:
+      213: -5297911692448414280
+    second: hack-Sheet_44frames_70-33_108
+  - first:
+      213: -8382754068039960515
+    second: hack-Sheet_44frames_70-33_109
+  - first:
+      213: -3757403744844758329
+    second: hack-Sheet_44frames_70-33_110
+  - first:
+      213: 1200203139078692333
+    second: hack-Sheet_44frames_70-33_111
+  - first:
+      213: -1341321734828159510
+    second: hack-Sheet_44frames_70-33_112
+  - first:
+      213: -6728076661320665621
+    second: hack-Sheet_44frames_70-33_113
+  - first:
+      213: -6530469520354561675
+    second: hack-Sheet_44frames_70-33_114
+  - first:
+      213: -4789240571674348540
+    second: hack-Sheet_44frames_70-33_115
+  - first:
+      213: -1096775704051821239
+    second: hack-Sheet_44frames_70-33_116
+  - first:
+      213: 3349733630976636649
+    second: hack-Sheet_44frames_70-33_117
+  - first:
+      213: 328383325116365696
+    second: hack-Sheet_44frames_70-33_118
+  - first:
+      213: 1083014421673950755
+    second: hack-Sheet_44frames_70-33_119
+  - first:
+      213: 722861627106847055
+    second: hack-Sheet_44frames_70-33_120
+  - first:
+      213: -6018340260052616331
+    second: hack-Sheet_44frames_70-33_121
+  - first:
+      213: 8154585504687474946
+    second: hack-Sheet_44frames_70-33_122
+  - first:
+      213: -5979068772595439011
+    second: hack-Sheet_44frames_70-33_123
+  - first:
+      213: -596906675859397973
+    second: hack-Sheet_44frames_70-33_124
+  - first:
+      213: 1709706355984427648
+    second: hack-Sheet_44frames_70-33_125
+  - first:
+      213: 8595169413951160384
+    second: hack-Sheet_44frames_70-33_126
+  - first:
+      213: 8070896993349045683
+    second: hack-Sheet_44frames_70-33_127
+  - first:
+      213: 700855882628257250
+    second: hack-Sheet_44frames_70-33_128
+  - first:
+      213: -2709398323324845321
+    second: hack-Sheet_44frames_70-33_129
+  - first:
+      213: 7633761221170851781
+    second: hack-Sheet_44frames_70-33_130
+  - first:
+      213: -4941799290891100903
+    second: hack-Sheet_44frames_70-33_131
+  - first:
+      213: 2406316433306338522
+    second: hack-Sheet_44frames_70-33_132
+  - first:
+      213: 1274432103355797566
+    second: hack-Sheet_44frames_70-33_133
+  - first:
+      213: 9220869565321869067
+    second: hack-Sheet_44frames_70-33_134
+  - first:
+      213: -2087889101089125877
+    second: hack-Sheet_44frames_70-33_135
+  - first:
+      213: -5609733345932766634
+    second: hack-Sheet_44frames_70-33_136
+  - first:
+      213: 9171810553061179126
+    second: hack-Sheet_44frames_70-33_137
+  - first:
+      213: 3746543679471857797
+    second: hack-Sheet_44frames_70-33_138
+  - first:
+      213: 7313970588410763206
+    second: hack-Sheet_44frames_70-33_139
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_1
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 708b683fc38d97be0800000000000000
+      internalID: -1478913246319167481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_2
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0d7e2bfd39260f60800000000000000
+      internalID: 8000127134254136587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_3
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3710261afb1086cf0800000000000000
+      internalID: -258955056015867533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_4
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 173f7e59d54ea9850800000000000000
+      internalID: 6384666512349197169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_5
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbfbf502717cddf50800000000000000
+      internalID: 6907896305597530045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_6
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17b4d42e27e5b3fd0800000000000000
+      internalID: -2361189732109694095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_7
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9bc7c6b2afa88ae0800000000000000
+      internalID: -1546793358615655523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_8
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a8dd95f3042e1420800000000000000
+      internalID: 2602557234090989734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_9
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8fc747717b490f60800000000000000
+      internalID: 8001009163704979340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_10
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7496addfa4744dc10800000000000000
+      internalID: 2077363715536742727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_11
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edeb9b31dafaa1ec0800000000000000
+      internalID: -3595368194606776610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_12
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d9a005d9b9763030800000000000000
+      internalID: 3474098001612417495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_13
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9c0de057ea816980800000000000000
+      internalID: -8547397891672699750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_14
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe2f53b0502612d90800000000000000
+      internalID: -7124305361720970513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_15
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 306fe6c53a2196d20800000000000000
+      internalID: 3272167097101121027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_16
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be20dfb9646354140800000000000000
+      internalID: 4703225062751011563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_17
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d508508361f528f0800000000000000
+      internalID: -565780768507820587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_18
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0cf5c03919276d50800000000000000
+      internalID: 6730393356297698318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_19
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eedc1e9fe33c4a4e0800000000000000
+      internalID: -1971236061633720850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_20
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28aa795ede690bd00800000000000000
+      internalID: 986454266897476226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_21
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dc37582314f2e210800000000000000
+      internalID: 1360918400537672915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_22
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 646f2d11a4fcf2530800000000000000
+      internalID: 3832509724949149254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_23
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 697def96a86ea6dc0800000000000000
+      internalID: -3644847466244810858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_24
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 892b930c35c27fa50800000000000000
+      internalID: 6554756520879960728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_25
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfae4f35c2362eeb0800000000000000
+      internalID: -4692078819728364803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_26
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0cd74a80f7117fd0800000000000000
+      internalID: -2346067609003762674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_27
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bd29ec5aaa06a010800000000000000
+      internalID: 1199658077560319413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_28
+      rect:
+        serializedVersion: 2
+        x: 1960
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31f62fcf1a77a28a0800000000000000
+      internalID: -6329114788698624237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_29
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac9c12b0274b11b20800000000000000
+      internalID: 3103460020141017546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_30
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70ae60efe734d9830800000000000000
+      internalID: 4079491050174343687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_31
+      rect:
+        serializedVersion: 2
+        x: 2170
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b813a354c43987c70800000000000000
+      internalID: 8969080613696582027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_32
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dce96fe98fcef1080800000000000000
+      internalID: -9214385760013738291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_33
+      rect:
+        serializedVersion: 2
+        x: 2310
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecfbc2c0138e51c90800000000000000
+      internalID: -7199593131926569010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_34
+      rect:
+        serializedVersion: 2
+        x: 2380
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 964948a29453e7e20800000000000000
+      internalID: 3350173761172444265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_35
+      rect:
+        serializedVersion: 2
+        x: 2450
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b67b75bac59fb8620800000000000000
+      internalID: 2777587771611002731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_36
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6abcdf06b252ae80800000000000000
+      internalID: -8168875832193009041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_37
+      rect:
+        serializedVersion: 2
+        x: 2590
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e62c15f33850675c0800000000000000
+      internalID: -4218177939724713362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_38
+      rect:
+        serializedVersion: 2
+        x: 2660
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dfeb44f75609e260800000000000000
+      internalID: 7127234860121059284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_39
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e1560197f5bbbb60800000000000000
+      internalID: 7762998457597841892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_40
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 013274c303d93eec0800000000000000
+      internalID: -3538812051687791856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_41
+      rect:
+        serializedVersion: 2
+        x: 2870
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40ad48200ef885090800000000000000
+      internalID: -8045522542019683836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_42
+      rect:
+        serializedVersion: 2
+        x: 2940
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13375a88d199d4d60800000000000000
+      internalID: 7876119675466511153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_43
+      rect:
+        serializedVersion: 2
+        x: 3010
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09a7b927d462b41c0800000000000000
+      internalID: -4518475687059031408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hack-Sheet_44frames_70-33_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 039c680bd15c1f44d90612930ac45f9c
+      internalID: 2798166635509709735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 58a614f9987a3d74792961599989ddab
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      hack-Sheet_44frames_70-33_0: 2798166635509709735
+      hack-Sheet_44frames_70-33_1: -1478913246319167481
+      hack-Sheet_44frames_70-33_10: 2077363715536742727
+      hack-Sheet_44frames_70-33_11: -3595368194606776610
+      hack-Sheet_44frames_70-33_12: 3474098001612417495
+      hack-Sheet_44frames_70-33_13: -8547397891672699750
+      hack-Sheet_44frames_70-33_14: -7124305361720970513
+      hack-Sheet_44frames_70-33_15: 3272167097101121027
+      hack-Sheet_44frames_70-33_16: 4703225062751011563
+      hack-Sheet_44frames_70-33_17: -565780768507820587
+      hack-Sheet_44frames_70-33_18: 6730393356297698318
+      hack-Sheet_44frames_70-33_19: -1971236061633720850
+      hack-Sheet_44frames_70-33_2: 8000127134254136587
+      hack-Sheet_44frames_70-33_20: 986454266897476226
+      hack-Sheet_44frames_70-33_21: 1360918400537672915
+      hack-Sheet_44frames_70-33_22: 3832509724949149254
+      hack-Sheet_44frames_70-33_23: -3644847466244810858
+      hack-Sheet_44frames_70-33_24: 6554756520879960728
+      hack-Sheet_44frames_70-33_25: -4692078819728364803
+      hack-Sheet_44frames_70-33_26: -2346067609003762674
+      hack-Sheet_44frames_70-33_27: 1199658077560319413
+      hack-Sheet_44frames_70-33_28: -6329114788698624237
+      hack-Sheet_44frames_70-33_29: 3103460020141017546
+      hack-Sheet_44frames_70-33_3: -258955056015867533
+      hack-Sheet_44frames_70-33_30: 4079491050174343687
+      hack-Sheet_44frames_70-33_31: 8969080613696582027
+      hack-Sheet_44frames_70-33_32: -9214385760013738291
+      hack-Sheet_44frames_70-33_33: -7199593131926569010
+      hack-Sheet_44frames_70-33_34: 3350173761172444265
+      hack-Sheet_44frames_70-33_35: 2777587771611002731
+      hack-Sheet_44frames_70-33_36: -8168875832193009041
+      hack-Sheet_44frames_70-33_37: -4218177939724713362
+      hack-Sheet_44frames_70-33_38: 7127234860121059284
+      hack-Sheet_44frames_70-33_39: 7762998457597841892
+      hack-Sheet_44frames_70-33_4: 6384666512349197169
+      hack-Sheet_44frames_70-33_40: -3538812051687791856
+      hack-Sheet_44frames_70-33_41: -8045522542019683836
+      hack-Sheet_44frames_70-33_42: 7876119675466511153
+      hack-Sheet_44frames_70-33_43: -4518475687059031408
+      hack-Sheet_44frames_70-33_5: 6907896305597530045
+      hack-Sheet_44frames_70-33_6: -2361189732109694095
+      hack-Sheet_44frames_70-33_7: -1546793358615655523
+      hack-Sheet_44frames_70-33_8: 2602557234090989734
+      hack-Sheet_44frames_70-33_9: 8001009163704979340
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
