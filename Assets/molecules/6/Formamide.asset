@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e4da949bdd31a4b8fec1739b249d99, type: 3}
+  m_Name: Formamide
+  m_EditorClassIdentifier: 
+  moleculeName: Formamide
+  chemicalFormula: "CH\u2083NO"
+  description: "o\tLiquide l\xE9g\xE8rement visqueux incolore. Il se transforme en
+    acide cyanhydrique au-dessus de 90 \xB0C et en ammoniac, monoxyde de carbone
+    ou en eau au-dessus de 200 \xB0C."
+  hydrogen: 3
+  azote: 1
+  carbone: 1
+  oxygene: 1

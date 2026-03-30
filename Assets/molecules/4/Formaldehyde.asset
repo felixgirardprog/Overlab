@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e4da949bdd31a4b8fec1739b249d99, type: 3}
+  m_Name: Formaldehyde
+  m_EditorClassIdentifier: 
+  moleculeName: "Formald\xE9hyde"
+  chemicalFormula: "CH\u2082O"
+  description: "o\tIl est pr\xE9sent dans la colle, les peintures, le vernis, les
+    produits de conservation et les d\xE9sinfectants. Peut \xEAtre dangereux en grande
+    quantit\xE9 et est un mutag\xE8ne."
+  hydrogen: 2
+  azote: 0
+  carbone: 1
+  oxygene: 1

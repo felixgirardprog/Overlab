@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e4da949bdd31a4b8fec1739b249d99, type: 3}
+  m_Name: Dimethyluree
+  m_EditorClassIdentifier: 
+  moleculeName: "Dim\xE9thylur\xE9e"
+  chemicalFormula: "C\u2083H\u2088N\u2082O"
+  description: "o\tD\xE9riv\xE9 de l\u2019ur\xE9e, c\u2019est une poudre cristalline
+    incolore et peu toxique. Elle est utilis\xE9e dans la synth\xE8se de la caf\xE9ine,
+    de certains herbicides, dans certains textiles et dans des agents anti-pli sans
+    formald\xE9hyde."
+  hydrogen: 8
+  azote: 2
+  carbone: 3
+  oxygene: 1

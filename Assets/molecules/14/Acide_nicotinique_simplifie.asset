@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e4da949bdd31a4b8fec1739b249d99, type: 3}
+  m_Name: Acide_nicotinique_simplifie
+  m_EditorClassIdentifier: 
+  moleculeName: "Acide nicotinique simplifi\xE9"
+  chemicalFormula: "C\u2086H\u2085NO\u2082"
+  description: "o\tAussi connu sous le nom de vitamine B3, r\xE9duit le cholest\xE9rol
+    dans le sang et r\xE9duit le risque d\u2019attaque cardiaque. Sa surconsommation
+    peut \xEAtre dangereuse chez une personne cardiaque."
+  hydrogen: 5
+  azote: 1
+  carbone: 6
+  oxygene: 2

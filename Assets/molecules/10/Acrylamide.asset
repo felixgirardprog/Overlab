@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e4da949bdd31a4b8fec1739b249d99, type: 3}
+  m_Name: Acrylamide
+  m_EditorClassIdentifier: 
+  moleculeName: Acrylamide
+  chemicalFormula: C3H5NO
+  description: "o\tIl est consid\xE9r\xE9 comme nocif pour la sant\xE9 humaine et
+    fait partie de la liste EPA des substances extr\xEAmement dangereuses. Il se
+    forme lors de la cuisson \xE0 haute temp\xE9rature (120\xB0C) d\u2019aliments
+    riches en glucides et en prot\xE9ines."
+  hydrogen: 5
+  azote: 1
+  carbone: 3
+  oxygene: 1

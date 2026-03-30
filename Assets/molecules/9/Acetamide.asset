@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e4da949bdd31a4b8fec1739b249d99, type: 3}
+  m_Name: Acetamide
+  m_EditorClassIdentifier: 
+  moleculeName: "Ac\xE9tamide"
+  chemicalFormula: "CH\u2083CONH\u2082"
+  description: "o\tCompos\xE9 organique solide, blanc et cristallin sous forme pur.
+    Il est toxique par inhalation, par ingestion et irritant pour la peau et les
+    yeux."
+  hydrogen: 5
+  azote: 1
+  carbone: 2
+  oxygene: 1

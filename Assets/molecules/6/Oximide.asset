@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e4da949bdd31a4b8fec1739b249d99, type: 3}
+  m_Name: Oximide
+  m_EditorClassIdentifier: 
+  moleculeName: Oximide
+  chemicalFormula: "C\u2082HNO\u2082"
+  description: "o\tC\u2019est une mol\xE9cule instable qui a une bande d\u2019absorption
+    mol\xE9culaire infrarouge."
+  hydrogen: 1
+  azote: 1
+  carbone: 2
+  oxygene: 2

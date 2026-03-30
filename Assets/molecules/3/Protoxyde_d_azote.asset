@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e4da949bdd31a4b8fec1739b249d99, type: 3}
+  m_Name: Protoxyde_d_azote
+  m_EditorClassIdentifier: 
+  moleculeName: "Protoxyde d\u2019azote"
+  chemicalFormula: "N\u2082O"
+  description: "o\tIl est dit \xAB gaz hilarant \xBB car euphorisant \xE0 l'inhalation,
+    d'o\xF9 son usage comme drogue r\xE9cr\xE9ative hallucinog\xE8ne. Il est utilis\xE9
+    en anesth\xE9sie, en chirurgie, en odontologie, en p\xE9diatrie pour ses propri\xE9t\xE9s
+    anesth\xE9siques"
+  hydrogen: 0
+  azote: 2
+  carbone: 0
+  oxygene: 1

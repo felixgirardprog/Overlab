@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e4da949bdd31a4b8fec1739b249d99, type: 3}
+  m_Name: Tetramethyluree
+  m_EditorClassIdentifier: 
+  moleculeName: "T\xE9tram\xE9thylur\xE9e"
+  chemicalFormula: "C\u2085H\u2081\u2082N\u2082O"
+  description: "o\tIsom\xE8re de l\u2019ur\xE9e, c\u2019est un liquide incolore qui
+    est miscible avec plusieurs compos\xE9s organiques et est un excellent solvent
+    pour des substances organiques."
+  hydrogen: 12
+  azote: 2
+  carbone: 5
+  oxygene: 1

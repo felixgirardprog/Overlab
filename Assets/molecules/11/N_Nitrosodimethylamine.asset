@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e4da949bdd31a4b8fec1739b249d99, type: 3}
+  m_Name: N_Nitrosodimethylamine
+  m_EditorClassIdentifier: 
+  moleculeName: "N-Nitrosodim\xE9thylamine"
+  chemicalFormula: "C\u2082H\u2086N\u2082O"
+  description: "o\tLiquide jaune, huileux et combustible. Compos\xE9 organique potentiellement
+    canc\xE9rig\xE8ne, il peut \xEAtre pr\xE9sent dans certains pesticides, teintures
+    et caoutchouc."
+  hydrogen: 6
+  azote: 2
+  carbone: 2
+  oxygene: 1

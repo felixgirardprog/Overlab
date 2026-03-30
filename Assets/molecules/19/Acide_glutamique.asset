@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e4da949bdd31a4b8fec1739b249d99, type: 3}
+  m_Name: Acide_glutamique
+  m_EditorClassIdentifier: 
+  moleculeName: Acide glutamique
+  chemicalFormula: "C\u2085H\u2089NO\u2084"
+  description: "o\tAcide amin\xE9 prot\xE9inog\xE8ne encod\xE9 sur les ARN messagers.
+    C\u2019est un neurotransmetteur pour la transmission des signaux, l\u2019apprentissage,
+    la m\xE9moire et la r\xE9gulation de dopamine."
+  hydrogen: 9
+  azote: 1
+  carbone: 5
+  oxygene: 4

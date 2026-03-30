@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e4da949bdd31a4b8fec1739b249d99, type: 3}
+  m_Name: Alcool_isopropylique
+  m_EditorClassIdentifier: 
+  moleculeName: Alcool isopropylique
+  chemicalFormula: "C\u2083H\u2088O"
+  description: "o\tIsom\xE8re du propanol, il s\u2019utilise comme biocide dans la
+    formulation de solution hydroalcoolique dans des d\xE9sinfectant \xE0 concentration
+    de 72% ou 99,8% d\u2019alcool "
+  hydrogen: 8
+  azote: 0
+  carbone: 3
+  oxygene: 1

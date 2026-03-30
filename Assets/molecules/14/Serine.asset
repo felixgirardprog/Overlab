@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e4da949bdd31a4b8fec1739b249d99, type: 3}
+  m_Name: Serine
+  m_EditorClassIdentifier: 
+  moleculeName: "S\xE9rine"
+  chemicalFormula: "C\u2083H\u2087NO\u2083"
+  description: "o\tC\u2019est un acide amin\xE9 prot\xE9inog\xE8ne encod\xE9 sur
+    les ARN messagers. Elle est utilis\xE9e dans la croissance des cellules et dans
+    des r\xE9cepteurs NMDA dans le cerveau."
+  hydrogen: 7
+  azote: 1
+  carbone: 3
+  oxygene: 3

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e4da949bdd31a4b8fec1739b249d99, type: 3}
+  m_Name: Valine
+  m_EditorClassIdentifier: 
+  moleculeName: Valine
+  chemicalFormula: "C\u2085H\u2081\u2081NO\u2082"
+  description: "o\tAcide amin\xE9 prot\xE9inog\xE8ne encod\xE9 sur les ARN messagers.
+    Elle est utile pour la reconstruction des tissus musculaires apr\xE8s un exercice
+    intense et fournit de l\u2019\xE9nergie rapide aux muscles."
+  hydrogen: 11
+  azote: 1
+  carbone: 5
+  oxygene: 2

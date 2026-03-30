@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e4da949bdd31a4b8fec1739b249d99, type: 3}
+  m_Name: Ethylamine
+  m_EditorClassIdentifier: 
+  moleculeName: "\xC9thylamine"
+  chemicalFormula: "C\u2082H\u2087N"
+  description: "o\tGaz incolore ayant une forte odeur d\u2019ammoniac, c\u2019est
+    un compos\xE9 utilis\xE9 en chimie industrielle et en synth\xE8se organique en
+    laboratoire."
+  hydrogen: 7
+  azote: 1
+  carbone: 2
+  oxygene: 0
