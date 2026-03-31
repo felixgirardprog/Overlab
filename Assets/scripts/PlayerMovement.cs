@@ -37,7 +37,9 @@ public class PlayerMovement : MonoBehaviour
     private bool paused = false;// variable pour savoir si le jeu est en pause ou pas
     public GameObject playerAnim;// objet du joueur pour les animations
     private Animator animateur;// animator du joueur pour les animations de déplacement et autres
-    Vector2 playerDirection;
+    public GameObject monImage;
+        Vector2 playerDirection;
+
 
 
 
