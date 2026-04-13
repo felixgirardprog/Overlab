@@ -2,37 +2,55 @@ using UnityEngine;
 
 public class Pause : MonoBehaviour
 {
-    private bool paused = false;// variable pour savoir si le jeu est en pause ou pas
+    private bool paused = false;
     public GameObject timer;
     public GameObject player;
-    private float currentTime;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public GameObject monImage; // Assurez-vous de glisser l'UI Image ici dans l'inspecteur Unity
+    public GameObject menupause;
+    private Animator animateurmenu;
+
     void Start()
     {
-        
+        // On s'assure que l'image est cachée au lancement du jeu
+        if (monImage != null) 
+            monImage.SetActive(false);
+        animateurmenu = menupause.GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // pause du jeu avec echap
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            timer.GetComponent<SimpleTimer>().StopTimer();
-            Debug.Log("Game Paused");
-            if (!paused)
-            {
-                timer.GetComponent<SimpleTimer>().pauseTimer();
-                player.GetComponent<PlayerMovement>().PauseGame();
+            TogglePause();
+        }
+    }
 
-                paused = true;
-            }
-            else
-            {
-                timer.GetComponent<SimpleTimer>().resumeTimer();
-                player.GetComponent<PlayerMovement>().PauseGame();
-                paused = false;
-            }
+    void TogglePause()
+    {
+        paused = !paused; // Alterne entre true et false
+
+        // Gestion de l'image (Menu de pause)
+        if (monImage != null)
+        {
+            monImage.SetActive(paused);
+        }
+
+        // Gestion des autres composants
+        if (paused)
+        {
+            Debug.Log("Game Paused");
+            timer.GetComponent<SimpleTimer>().pauseTimer();
+            player.GetComponent<PlayerMovement>().PauseGame();
+            animateurmenu.SetBool("Pause", true); // Assurez-vous d'avoir un trigger "Pause" dans votre Animator pour le menu de pause
+            Time.timeScale = 0f; // Optionnel : fige physiquement le temps dans Unity
+        }
+        else
+        {
+            Debug.Log("Game Resumed");
+            timer.GetComponent<SimpleTimer>().resumeTimer();
+            player.GetComponent<PlayerMovement>().PauseGame();
+            animateurmenu.SetBool("Pause", false);
+            Time.timeScale = 1f; // Relance le temps
         }
     }
 }
