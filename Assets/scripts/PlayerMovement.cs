@@ -37,9 +37,11 @@ public class PlayerMovement : MonoBehaviour
     private bool paused = false;// variable pour savoir si le jeu est en pause ou pas
     public GameObject playerAnim;// objet du joueur pour les animations
     private Animator animateur;// animator du joueur pour les animations de déplacement et autres
-    public GameObject monImage;
-        Vector2 playerDirection;
-
+    public Synthetiseur synthetiseur;// objet du menu du synthetiseur pour l'ouvrir et le fermer
+    private bool isSynthetiseurOpen = false;// variable pour savoir si le menu du synthetiseur est ouvert ou pas (pour eviter de l'ouvrir plusieurs fois)
+    public choix_molecule script_choix_molecule;// objet du script de choix de molecule pour choisir la molecule à synthetiser et l'afficher dans les menus
+    private Molecule molecule_a_synthetiser;//variable pour stocker la molecule à synthétiser choisie au hazard par le script de choix de molecule
+    Vector2 playerDirection;
 
 
 
@@ -100,14 +102,21 @@ public class PlayerMovement : MonoBehaviour
             {
                 Energy += maxEnergy * 0.3f;
                 Energy = Mathf.Clamp(Energy, 0, maxEnergy);
-                Debug.Log("Energy increased by 30%: " + Energy);
+                Debug.Log("Energy increased by 30% to: " + (Energy / maxEnergy * 100) + "%"); // Affiche le pourcentage d'énergie actuel dans la console
             }
 
             if (Input.GetKeyDown(KeyCode.O))
             {
                 Energy -= maxEnergy * 0.3f;
                 Energy = Mathf.Clamp(Energy, 0, maxEnergy);
-                Debug.Log("Energy decreased by 30%: " + Energy);
+                Debug.Log("Energy decreased by 30% to: " + (Energy / maxEnergy * 100) + "%"); // Affiche le pourcentage d'énergie actuel dans la console
+            }
+
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                molecule_a_synthetiser = script_choix_molecule.MoleculeChoisie(timer.GetComponent<SimpleTimer>().GetTotalSeconds());
+                Debug.Log("Molecule choisie: " + molecule_a_synthetiser.moleculeName);
+                script_choix_molecule.AfficherMolecule(molecule_a_synthetiser);
             }
         
 
@@ -118,7 +127,6 @@ public class PlayerMovement : MonoBehaviour
                 float energyDecreasePerSecond = maxEnergy / LifeExpectancy;
                 Energy -= energyDecreasePerSecond * Time.deltaTime;
                 Energy = Mathf.Clamp(Energy, 0, maxEnergy);
-                Debug.Log("Energy: " + Energy);
 
                 height = Energy / maxEnergy;
                 energyBar.transform.localScale = new Vector3(1, height, 1);
@@ -211,45 +219,44 @@ public class PlayerMovement : MonoBehaviour
     {
         if (hitObstacle.collider != null)
         {
-            Debug.Log("Hit an obstacle! Distance: " + hitObstacle.distance + " Object: " + hitObstacle.collider.gameObject.name);
 
                 // interraction avec les éléments collectables (H, N, C, O)
                 if (hitObstacle.collider.gameObject.name[0] == 'H')
                 {
                     H++;
-                    Debug.Log("H collected! Total H: " + H);
                     HText.text = H.ToString();
                 }
                 else if (hitObstacle.collider.gameObject.name[0] == 'N')
                 {
                     N++;
-                    Debug.Log("N collected! Total N: " + N);
                     NText.text = N.ToString();
                 }
                 else if (hitObstacle.collider.gameObject.name[0] == 'C')
                 {
                     C++;
-                    Debug.Log("C collected! Total C: " + C);
                     CText.text = C.ToString();
                 }
                 else if (hitObstacle.collider.gameObject.name[0] == 'O')
                 {
                     O++;
-                    Debug.Log("O collected! Total O: " + O);
                     OText.text = O.ToString();
                 }
                 else if (hitObstacle.collider.gameObject.name[0] == 'S')
                 {
-                    Debug.Log("Synthetiseur ouvert! (pas encore implémenté)");
-                    // ouvrir le menu du synthetiseur (a faire)
+                    isSynthetiseurOpen = !isSynthetiseurOpen;
+                    if (isSynthetiseurOpen)
+                    {
+                        Debug.Log("Synthetiseur ouvert!");
+                        synthetiseur.OpenSynthetiseur();
+                    }
+                    else
+                    {
+                        Debug.Log("Synthetiseur fermé!");
+                        synthetiseur.CloseSynthetiseur();
+                    }
                 }
             
             
-        }
-        // si il n'y a pas d'obstacle en face du joueur
-        else if (hitObstacle.collider == null)
-        {
-            Debug.Log("No obstacle in front of the player.");
         }
     }
 
