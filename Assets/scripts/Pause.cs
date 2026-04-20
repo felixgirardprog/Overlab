@@ -8,6 +8,7 @@ public class Pause : MonoBehaviour
     public GameObject monImage; // Assurez-vous de glisser l'UI Image ici dans l'inspecteur Unity
     public GameObject menupause;
     private Animator animateurmenu;
+    public GameObject reprendrebutton;
 
     void Start()
     {
@@ -15,6 +16,7 @@ public class Pause : MonoBehaviour
         if (monImage != null) 
             monImage.SetActive(false);
         animateurmenu = menupause.GetComponent<Animator>();
+        paused = false; // Assurez-vous que le jeu commence en mode non-pausé
     }
 
     void Update()
@@ -53,4 +55,18 @@ public class Pause : MonoBehaviour
             Time.timeScale = 1f; // Relance le temps
         }
     }
+    public void Reprendre()
+    {
+        paused = false;
+        if (monImage != null)
+        {
+            monImage.SetActive(false);
+        }
+        Debug.Log("Game Resumed");
+        timer.GetComponent<SimpleTimer>().resumeTimer();
+        player.GetComponent<PlayerMovement>().PauseGame();
+        animateurmenu.SetBool("Pause", false);
+        Time.timeScale = 1f; // Relance le temps
+    }
 }
+    
