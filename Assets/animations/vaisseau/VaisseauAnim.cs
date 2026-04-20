@@ -13,7 +13,7 @@ public class VaisseauAnim : MonoBehaviour
 
     public Sprite shipA;
     public Sprite shipB;
-    public float partDuration = 0.5f;   // durée de l'animation part
+    public float partDuration = 1f;   // durée de l'animation part
     public float arriveDuration = 0.5f; // durée de l'animation arrive
 
 
@@ -51,8 +51,7 @@ public class VaisseauAnim : MonoBehaviour
     // 2. Attendre la fin de l'animation de départ
     yield return new WaitForSeconds(partDuration);
 
-    // 3. Changer le sprite AVANT l'arrivée
-    sr.sprite = dodge ? shipA : shipB;
+    
 
     // 4. Jouer l'animation d'arrivée
     animator.SetTrigger("arrive");
@@ -62,4 +61,8 @@ public class VaisseauAnim : MonoBehaviour
     yield return new WaitForSeconds(arriveDuration);
 }
 
+public void ChangeShipSprite()
+{
+    sr.sprite = dodge ? shipA : shipB;
+}
 }
