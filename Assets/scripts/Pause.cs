@@ -9,6 +9,7 @@ public class Pause : MonoBehaviour
     public GameObject menupause;
     private Animator animateurmenu;
     public GameObject reprendrebutton;
+    public Animator volume;
 
     void Start()
     {

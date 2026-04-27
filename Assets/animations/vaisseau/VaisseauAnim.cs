@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections;
 
-
 public class VaisseauAnim : MonoBehaviour
 {
     private Animator animator;
@@ -13,56 +12,80 @@ public class VaisseauAnim : MonoBehaviour
 
     public Sprite shipA;
     public Sprite shipB;
-    public float partDuration = 1f;   // durée de l'animation part
-    public float arriveDuration = 0.5f; // durée de l'animation arrive
+    public Sprite shipC;
+    public Sprite shipD;
+    public Sprite shipE;
+    public Sprite shipF;
+    public Sprite shipG;
 
+    private Sprite shipSpace;
 
+    public float partDuration = 0.5f;
+    public float arriveDuration = 0.5f;
 
     private SpriteRenderer sr;
 
-    
     void Start()
-{
-    animator = GetComponent<Animator>();
-    menuanimator = menu_anim.GetComponent<Animator>();
-    sr = GetComponent<SpriteRenderer>();
+    {
+        animator = GetComponent<Animator>();
+        menuanimator = menu_anim.GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
 
-}
-
-
+        // IMPORTANT : choisir un sprite dès le début
+        choix();
+        
+    }
 
     void Update()
-{
-    if (Input.GetKeyDown(KeyCode.V))
     {
-        float rand = Random.Range(0f, 100f);
-        dodge = rand < chanceShipA;
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            float rand = Random.Range(0f, 100f);
+            dodge = rand < chanceShipA;
 
-        StartCoroutine(SwitchShip());
+            StartCoroutine(SwitchShip());
+        }
     }
-}
 
     IEnumerator SwitchShip()
-{
-    // 1. Jouer l'animation de départ avec l'ancien sprite
-    animator.SetTrigger("part");
-    menuanimator.SetTrigger("part");
+    {
+        animator.SetTrigger("part");
+        menuanimator.SetTrigger("part");
 
-    // 2. Attendre la fin de l'animation de départ
-    yield return new WaitForSeconds(partDuration);
+        // Attendre la durée réelle de l'animation
+        yield return new WaitForSeconds(partDuration);
 
-    
+        // Choisir le nouveau sprite
+        choix();
 
-    // 4. Jouer l'animation d'arrivée
-    animator.SetTrigger("arrive");
-    menuanimator.SetTrigger("arrive");
+        
 
-    // 5. (optionnel) attendre la fin de l'arrivée
-    yield return new WaitForSeconds(arriveDuration);
-}
+        animator.SetTrigger("arrive");
+        menuanimator.SetTrigger("arrive");
+    }
 
-public void ChangeShipSprite()
-{
-    sr.sprite = dodge ? shipA : shipB;
-}
+    void choix()
+    {
+        if (dodge)
+        {
+            shipSpace = shipA;
+        }
+        else
+        {
+            Sprite[] ships = { shipB, shipC, shipD, shipE, shipF, shipG };
+            int index = Random.Range(0, ships.Length);
+            shipSpace = ships[index];
+        }
+    }
+
+    public void ChangeShipSprite()
+    {
+        if (shipSpace == null)
+        {
+            Debug.LogError("ERREUR : shipSpace est NULL !");
+            return;
+        }
+
+        sr.sprite = shipSpace;
+    }
 }
