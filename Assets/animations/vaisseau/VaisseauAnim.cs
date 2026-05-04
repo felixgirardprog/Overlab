@@ -17,6 +17,11 @@ public class VaisseauAnim : MonoBehaviour
     public Sprite shipE;
     public Sprite shipF;
     public Sprite shipG;
+    public Sprite shipH;
+    public Sprite shipI;
+    public Sprite shipJ;
+    public Sprite shipK;
+
 
     private Sprite shipSpace;
 
@@ -72,7 +77,7 @@ public class VaisseauAnim : MonoBehaviour
         }
         else
         {
-            Sprite[] ships = { shipB, shipC, shipD, shipE, shipF, shipG };
+            Sprite[] ships = { shipB, shipC, shipD, shipE, shipF, shipG,  shipH, shipI, shipJ, shipK};
             int index = Random.Range(0, ships.Length);
             shipSpace = ships[index];
         }

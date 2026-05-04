@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 47f3007d07d9c0a449e17757a5e76b35
+guid: f8d79e5a47ecadb4989ce843ccf314b9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6470420953857388291
-    second: civic_0
-  - first:
-      213: -4503891922066137049
-    second: civic_1
+      213: 3105877725731954320
+    second: C4_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: civic_0
+      name: C4_0
       rect:
         serializedVersion: 2
-        x: 11
+        x: 2
         y: 0
-        width: 1494
-        height: 1024
+        width: 115
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df0161a9c627436a0800000000000000
-      internalID: -6470420953857388291
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: civic_1
-      rect:
-        serializedVersion: 2
-        x: 158
-        y: 443
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7202f76d826fe71c0800000000000000
-      internalID: -4503891922066137049
+      spriteID: 09e1d0ef55b4a1b20800000000000000
+      internalID: 3105877725731954320
       vertices: []
       indices: 
       edges: []

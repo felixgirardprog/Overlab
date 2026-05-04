@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bf1bf7b11a5c30a4da9991a7bd54f510
+guid: 08cddd1f5f6bc954d802f37d4d363657
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8439742332716181728
-    second: acura_0
+      213: -5882641607696394303
+    second: spark (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: acura_0
+      name: spark (1)_0
       rect:
         serializedVersion: 2
-        x: 11
+        x: 0
         y: 0
-        width: 1494
-        height: 1024
+        width: 104
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0e8ef599fecff1570800000000000000
-      internalID: 8439742332716181728
+      spriteID: 1c7d25810a8ac5ea0800000000000000
+      internalID: -5882641607696394303
       vertices: []
       indices: 
       edges: []

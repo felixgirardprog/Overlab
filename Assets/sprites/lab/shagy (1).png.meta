@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3ce6f9a86ede4a94a8922153ebc2f457
+guid: 42a8b5b1847d22543b2f85fc53251bc2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3149389169688070996
-    second: spark_0
+      213: 812224684885155956
+    second: shagy (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spark_0
+      name: shagy (1)_0
       rect:
         serializedVersion: 2
-        x: 11
+        x: 1
         y: 0
-        width: 1494
-        height: 1024
+        width: 126
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ca4b7418c3f1b44d0800000000000000
-      internalID: -3149389169688070996
+      spriteID: 470226c2c0a954b00800000000000000
+      internalID: 812224684885155956
       vertices: []
       indices: 
       edges: []

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 808d3fabc43dcb843a8e475239f39c39
+guid: aa590fdc6f3240649aa810a1cc4662cd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6081420999232331868
-    second: elantra_0
+      213: -4487042359705330523
+    second: rav4 (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: elantra_0
+      name: rav4 (1)_0
       rect:
         serializedVersion: 2
-        x: 11
+        x: 0
         y: 0
-        width: 1403
-        height: 1024
+        width: 123
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4afd72b62d37a9ba0800000000000000
-      internalID: -6081420999232331868
+      spriteID: 5ac12a94fb2dab1c0800000000000000
+      internalID: -4487042359705330523
       vertices: []
       indices: 
       edges: []
