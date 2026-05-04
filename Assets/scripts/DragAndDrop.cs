@@ -30,7 +30,7 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
     }
 
 
-    public void OnBeginDrag(PointerEventData eventData)
+    public virtual void OnBeginDrag(PointerEventData eventData)
     {
         image.color = new Color32(255, 255, 255, 170); // couleur plus transparente pour indiquer que l'objet est en train d'être déplacé
     }

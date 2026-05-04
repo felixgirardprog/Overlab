@@ -21,6 +21,10 @@ public class DragAtome : DragAndDrop, IDragHandler, IBeginDragHandler, IEndDragH
                 synthZone.AjoutAtome(GetComponent<Atome>()); // Ajoute l'atome à la liste de la zone
 
             }
+            else
+            {
+                synthZone.RemoveAtome(GetComponent<Atome>()); // Ajoute l'atome à la liste de la zone
+            }
         }
     }
 }

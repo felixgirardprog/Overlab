@@ -4,7 +4,7 @@ public class MoleculeZone : MonoBehaviour
 {
     private Transform rectransform;
     public GameObject moleculePrefab;
-    public GameObject parentobject;
+    public Transform parentobject;
 
     public void SpawnMolecul(Molecule properties)
     {
@@ -13,10 +13,15 @@ public class MoleculeZone : MonoBehaviour
             rectransform = transform;
         }
 
-        GameObject moleculeInstance = Instantiate(moleculePrefab, rectransform.position, Quaternion.identity);
+        if (properties != null)
+        {
+            GameObject moleculeInstance = Instantiate(moleculePrefab, rectransform.position, Quaternion.identity, parentobject);
+            moleculeInstance.transform.localScale = new Vector3(2f, 2f, 2f);
+            moleculeInstance.name = properties.moleculeName;
 
-        Moleculeobject moleculeObject = moleculeInstance.GetComponent<Moleculeobject>();
+            Moleculeobject moleculeObject = moleculeInstance.GetComponent<Moleculeobject>();
 
-        moleculeObject.moleculeinfo = properties;
+            moleculeObject.moleculeinfo = properties;
+        }
     }
 }

@@ -29,6 +29,7 @@ public class CrerMolecule : MonoBehaviour
         Debug.Log("Recherche de molécule pour H:"+currentAtoms.Hydrogen+" O:"+currentAtoms.Oxygene+" C:"+currentAtoms.Carbone+" N:"+currentAtoms.Azote);
         Molecule currentmolecule = FindMatchingMolecule(currentAtoms);
         zoneMolecule.SpawnMolecul(currentmolecule);
+        currentAtoms.clear(); // Réinitialise les compteurs d'atomes pour la prochaine synthèse
     }
 
     public Molecule FindMatchingMolecule(InventaireSynthetiseur currentAtoms)

@@ -8,6 +8,7 @@ public class DragMolecule : DragAndDrop, IDragHandler, IBeginDragHandler, IEndDr
 {
     public RectTransform zoneRectTransform;
     public PlayerMovement player;
+    public GameObject itself; // Référence à l'objet lui-même pour pouvoir le détruire
 
     public override void OnEndDrag(PointerEventData eventData)
     {
@@ -18,7 +19,13 @@ public class DragMolecule : DragAndDrop, IDragHandler, IBeginDragHandler, IEndDr
             // On utilise la position écran de l'atome (rectTransform)
             if (RectTransformUtility.RectangleContainsScreenPoint(zoneRectTransform, rectTransform.position, eventData.pressEventCamera))
             {
-                player.AddMolecule();
+                Moleculeobject molecule = GetComponent<Moleculeobject>();
+                player.AddMolecule(molecule);
+            }
+            else
+            {
+                player.RemoveMolecule(GetComponent<Moleculeobject>());
+                Destroy(itself);
             }
         }
     }

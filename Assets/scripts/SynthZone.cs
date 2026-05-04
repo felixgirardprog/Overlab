@@ -44,13 +44,24 @@ public class SynthZone : MonoBehaviour
 
     public void AjoutAtome(Atome atome)
     {
-        atomsInside.Add(atome);
-        switch(atome.atomeType)
+        if (!atomsInside.Contains(atome))
         {
-            case "H": playerMovement.RemoveH(); break;
-            case "O": playerMovement.RemoveO(); break;
-            case "C": playerMovement.RemoveC(); break;
-            case "N": playerMovement.RemoveN(); break;
+            atomsInside.Add(atome);
+            switch (atome.atomeType)
+            {
+                case "H": playerMovement.RemoveH(); break;
+                case "O": playerMovement.RemoveO(); break;
+                case "C": playerMovement.RemoveC(); break;
+                case "N": playerMovement.RemoveN(); break;
+            }
+        }
+    }
+
+    public void RemoveAtome(Atome atome)
+    {
+        if (atomsInside.Contains(atome))
+        {
+            atomsInside.Remove(atome);
         }
     }
 

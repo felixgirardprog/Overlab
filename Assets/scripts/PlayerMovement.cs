@@ -1,7 +1,9 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 using TMPro;
+using NUnit.Framework;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -16,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public int N;// variables pour stocker le nombre d'Azote dans l'inventaire
     public int C;// variables pour stocker le nombre de Carbone dans l'inventaire
     public int O;// variables pour stocker le nombre d'Oxygene dans l'inventaire
-    public Molecule[] inv_molecule; 
+    public List<Moleculeobject> inv_molecule = new List<Moleculeobject>(); 
     public TMP_Text HText;// objet de texte pour afficher le nombre d'Helium collecté
     public TMP_Text NText;// objet de texte pour afficher le nombre d'Azote collecté
     public TMP_Text CText;// objet de texte pour afficher le nombre de Carbone collecté
@@ -290,5 +292,15 @@ public class PlayerMovement : MonoBehaviour
     void UpdateSacUI()
     {
         sacui.Refresh(H, N, C, O);
+    }
+
+    public void AddMolecule(Moleculeobject molecule)
+    {
+        if (!(inv_molecule.Contains(molecule))) inv_molecule.Add(molecule);
+    }
+
+    public void RemoveMolecule(Moleculeobject molecule)
+    {
+        if (inv_molecule.Contains(molecule)) inv_molecule.Remove(molecule);
     }
 }
