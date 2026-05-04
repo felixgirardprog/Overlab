@@ -69,6 +69,11 @@ public class SimpleTimer : MonoBehaviour
     {
         return Time.time - startTime;
     }
+
+    public int GetTotalSeconds()
+    {
+        return (int)(Time.time - startTime);
+    }
     
 
 }

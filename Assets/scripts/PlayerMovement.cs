@@ -1,20 +1,24 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 using TMPro;
+using NUnit.Framework;
 
 public class PlayerMovement : MonoBehaviour
 {
 
     public Rigidbody2D body;// rigidbody du joueur pour le déplacer (gere la physique)
+    public SacUI sacui;// objet du sac pour faire spawn les atomes dedans
     public float movespeed;// vitesse de déplacement du joueur
     public float obstaclerayDistance;// distance du raycast pour detecter les obstacles devant le joueur
     public GameObject obstacleRayObject;// objet de départ du raycast pour detecter les obstacles devant le joueur
     public LayerMask layerMask;// quel layer le raycast doit detecter (pour eviter de detecter les autres obstacles)
-    private int H;// variables pour stocker le nombre d'Helium dans l'inventaire
-    private int N;// variables pour stocker le nombre d'Azote dans l'inventaire
-    private int C;// variables pour stocker le nombre de Carbone dans l'inventaire
-    private int O;// variables pour stocker le nombre d'Oxygene dans l'inventaire
+    public int H;// variables pour stocker le nombre d'Helium dans l'inventaire
+    public int N;// variables pour stocker le nombre d'Azote dans l'inventaire
+    public int C;// variables pour stocker le nombre de Carbone dans l'inventaire
+    public int O;// variables pour stocker le nombre d'Oxygene dans l'inventaire
+    public List<Moleculeobject> inv_molecule = new List<Moleculeobject>(); 
     public TMP_Text HText;// objet de texte pour afficher le nombre d'Helium collecté
     public TMP_Text NText;// objet de texte pour afficher le nombre d'Azote collecté
     public TMP_Text CText;// objet de texte pour afficher le nombre de Carbone collecté
@@ -37,13 +41,12 @@ public class PlayerMovement : MonoBehaviour
     private bool paused = false;// variable pour savoir si le jeu est en pause ou pas
     public GameObject playerAnim;// objet du joueur pour les animations
     private Animator animateur;// animator du joueur pour les animations de déplacement et autres
-    public GameObject monImage;
-        Vector2 playerDirection;
-
-
-
-
-
+    public Synthetiseur synthetiseur;// objet du menu du synthetiseur pour l'ouvrir et le fermer
+    private bool isSynthetiseurOpen = false;// variable pour savoir si le menu du synthetiseur est ouvert ou pas (pour eviter de l'ouvrir plusieurs fois)
+    public choix_molecule script_choix_molecule;// objet du script de choix de molecule pour choisir la molecule à synthetiser et l'afficher dans les menus
+    private Molecule molecule_a_synthetiser;//variable pour stocker la molecule à synthétiser choisie au hazard par le script de choix de molecule
+    public GameObject commande_vaisseau_menu;// objet du menu de commande du vaisseau pour le désactiver à la mort du joueur
+    Vector2 playerDirection;
 
     // Start est appelé avant la première frame update
     void Start()
@@ -62,11 +65,6 @@ public class PlayerMovement : MonoBehaviour
         animateur = playerAnim.GetComponent<Animator>();
     }
 
-
-
-
-
-
     // Update est appelé une fois par frame
     void Update()
     {
@@ -74,6 +72,8 @@ public class PlayerMovement : MonoBehaviour
         if (Energy <= 0 && !isDead)
         {
             isDead = true;
+            synthetiseur.CloseSynthetiseur();
+            commande_vaisseau_menu.SetActive(false);
             Debug.Log("Game Over! Energy depleted.");
             timer.GetComponent<SimpleTimer>().playing = false;
             float gameTime = timer.GetComponent<SimpleTimer>().GetTime();
@@ -100,14 +100,21 @@ public class PlayerMovement : MonoBehaviour
             {
                 Energy += maxEnergy * 0.3f;
                 Energy = Mathf.Clamp(Energy, 0, maxEnergy);
-                Debug.Log("Energy increased by 30%: " + Energy);
+                Debug.Log("Energy increased by 30% to: " + (Energy / maxEnergy * 100) + "%"); // Affiche le pourcentage d'énergie actuel dans la console
             }
 
             if (Input.GetKeyDown(KeyCode.O))
             {
                 Energy -= maxEnergy * 0.3f;
                 Energy = Mathf.Clamp(Energy, 0, maxEnergy);
-                Debug.Log("Energy decreased by 30%: " + Energy);
+                Debug.Log("Energy decreased by 30% to: " + (Energy / maxEnergy * 100) + "%"); // Affiche le pourcentage d'énergie actuel dans la console
+            }
+
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                molecule_a_synthetiser = script_choix_molecule.MoleculeChoisie(timer.GetComponent<SimpleTimer>().GetTotalSeconds());
+                Debug.Log("Molecule choisie: " + molecule_a_synthetiser.moleculeName);
+                script_choix_molecule.AfficherMolecule(molecule_a_synthetiser);
             }
         
 
@@ -118,7 +125,6 @@ public class PlayerMovement : MonoBehaviour
                 float energyDecreasePerSecond = maxEnergy / LifeExpectancy;
                 Energy -= energyDecreasePerSecond * Time.deltaTime;
                 Energy = Mathf.Clamp(Energy, 0, maxEnergy);
-                Debug.Log("Energy: " + Energy);
 
                 height = Energy / maxEnergy;
                 energyBar.transform.localScale = new Vector3(1, height, 1);
@@ -204,57 +210,97 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-
-
     // fonction d'interraction avec l'objet en face du joueur
     private void onInteract(RaycastHit2D hitObstacle)
     {
         if (hitObstacle.collider != null)
         {
-            Debug.Log("Hit an obstacle! Distance: " + hitObstacle.distance + " Object: " + hitObstacle.collider.gameObject.name);
 
                 // interraction avec les éléments collectables (H, N, C, O)
                 if (hitObstacle.collider.gameObject.name[0] == 'H')
                 {
                     H++;
-                    Debug.Log("H collected! Total H: " + H);
                     HText.text = H.ToString();
+                    sacui.Refresh(H, N, C, O);
                 }
                 else if (hitObstacle.collider.gameObject.name[0] == 'N')
                 {
                     N++;
-                    Debug.Log("N collected! Total N: " + N);
                     NText.text = N.ToString();
+                    sacui.Refresh(H, N, C, O);
                 }
                 else if (hitObstacle.collider.gameObject.name[0] == 'C')
                 {
                     C++;
-                    Debug.Log("C collected! Total C: " + C);
                     CText.text = C.ToString();
+                    sacui.Refresh(H, N, C, O);
                 }
                 else if (hitObstacle.collider.gameObject.name[0] == 'O')
                 {
                     O++;
-                    Debug.Log("O collected! Total O: " + O);
                     OText.text = O.ToString();
+                    sacui.Refresh(H, N, C, O);
                 }
                 else if (hitObstacle.collider.gameObject.name[0] == 'S')
                 {
-                    Debug.Log("Synthetiseur ouvert! (pas encore implémenté)");
-                    // ouvrir le menu du synthetiseur (a faire)
+                    isSynthetiseurOpen = !isSynthetiseurOpen;
+                    if (isSynthetiseurOpen)
+                    {
+
+                        synthetiseur.OpenSynthetiseur();
+                    }
+                    else
+                    {
+                        synthetiseur.CloseSynthetiseur();
+                    }
                 }
             
             
-        }
-        // si il n'y a pas d'obstacle en face du joueur
-        else if (hitObstacle.collider == null)
-        {
-            Debug.Log("No obstacle in front of the player.");
         }
     }
 
     public void PauseGame()
     {
         paused = !paused;
+    }
+    public int GetH() => H;
+    public int GetN() => N;
+    public int GetC() => C;
+    public int GetO() => O;
+
+    public void RemoveH()
+    {
+        H--;
+        HText.text = H.ToString();
+    }
+    public void RemoveN()
+    {
+        N--;
+        NText.text = N.ToString();
+    }
+    public void RemoveC()
+    {
+        C--;
+        CText.text = C.ToString();
+    }
+    public void RemoveO()
+    {
+        O--;
+        OText.text = O.ToString();
+    }
+
+    void UpdateSacUI()
+    {
+        sacui.Refresh(H, N, C, O);
+    }
+
+    public void AddMolecule(Moleculeobject molecule)
+    {
+        if (!(inv_molecule.Contains(molecule))) inv_molecule.Add(molecule);
+    }
+
+    public void RemoveMolecule(Moleculeobject molecule)
+    {
+        if (inv_molecule.Contains(molecule)) inv_molecule.Remove(molecule);
     }
 }
