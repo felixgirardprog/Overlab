@@ -7,14 +7,16 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public Rigidbody2D body;// rigidbody du joueur pour le déplacer (gere la physique)
+    public SacUI sacui;// objet du sac pour faire spawn les atomes dedans
     public float movespeed;// vitesse de déplacement du joueur
     public float obstaclerayDistance;// distance du raycast pour detecter les obstacles devant le joueur
     public GameObject obstacleRayObject;// objet de départ du raycast pour detecter les obstacles devant le joueur
     public LayerMask layerMask;// quel layer le raycast doit detecter (pour eviter de detecter les autres obstacles)
-    private int H;// variables pour stocker le nombre d'Helium dans l'inventaire
-    private int N;// variables pour stocker le nombre d'Azote dans l'inventaire
-    private int C;// variables pour stocker le nombre de Carbone dans l'inventaire
-    private int O;// variables pour stocker le nombre d'Oxygene dans l'inventaire
+    public int H;// variables pour stocker le nombre d'Helium dans l'inventaire
+    public int N;// variables pour stocker le nombre d'Azote dans l'inventaire
+    public int C;// variables pour stocker le nombre de Carbone dans l'inventaire
+    public int O;// variables pour stocker le nombre d'Oxygene dans l'inventaire
+    public Molecule[] inv_molecule; 
     public TMP_Text HText;// objet de texte pour afficher le nombre d'Helium collecté
     public TMP_Text NText;// objet de texte pour afficher le nombre d'Azote collecté
     public TMP_Text CText;// objet de texte pour afficher le nombre de Carbone collecté
@@ -41,11 +43,8 @@ public class PlayerMovement : MonoBehaviour
     private bool isSynthetiseurOpen = false;// variable pour savoir si le menu du synthetiseur est ouvert ou pas (pour eviter de l'ouvrir plusieurs fois)
     public choix_molecule script_choix_molecule;// objet du script de choix de molecule pour choisir la molecule à synthetiser et l'afficher dans les menus
     private Molecule molecule_a_synthetiser;//variable pour stocker la molecule à synthétiser choisie au hazard par le script de choix de molecule
+    public GameObject commande_vaisseau_menu;// objet du menu de commande du vaisseau pour le désactiver à la mort du joueur
     Vector2 playerDirection;
-
-
-
-
 
     // Start est appelé avant la première frame update
     void Start()
@@ -64,11 +63,6 @@ public class PlayerMovement : MonoBehaviour
         animateur = playerAnim.GetComponent<Animator>();
     }
 
-
-
-
-
-
     // Update est appelé une fois par frame
     void Update()
     {
@@ -76,6 +70,8 @@ public class PlayerMovement : MonoBehaviour
         if (Energy <= 0 && !isDead)
         {
             isDead = true;
+            synthetiseur.CloseSynthetiseur();
+            commande_vaisseau_menu.SetActive(false);
             Debug.Log("Game Over! Energy depleted.");
             timer.GetComponent<SimpleTimer>().playing = false;
             float gameTime = timer.GetComponent<SimpleTimer>().GetTime();
@@ -212,8 +208,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-
-
     // fonction d'interraction avec l'objet en face du joueur
     private void onInteract(RaycastHit2D hitObstacle)
     {
@@ -225,33 +219,36 @@ public class PlayerMovement : MonoBehaviour
                 {
                     H++;
                     HText.text = H.ToString();
+                    sacui.Refresh(H, N, C, O);
                 }
                 else if (hitObstacle.collider.gameObject.name[0] == 'N')
                 {
                     N++;
                     NText.text = N.ToString();
+                    sacui.Refresh(H, N, C, O);
                 }
                 else if (hitObstacle.collider.gameObject.name[0] == 'C')
                 {
                     C++;
                     CText.text = C.ToString();
+                    sacui.Refresh(H, N, C, O);
                 }
                 else if (hitObstacle.collider.gameObject.name[0] == 'O')
                 {
                     O++;
                     OText.text = O.ToString();
+                    sacui.Refresh(H, N, C, O);
                 }
                 else if (hitObstacle.collider.gameObject.name[0] == 'S')
                 {
                     isSynthetiseurOpen = !isSynthetiseurOpen;
                     if (isSynthetiseurOpen)
                     {
-                        Debug.Log("Synthetiseur ouvert!");
+
                         synthetiseur.OpenSynthetiseur();
                     }
                     else
                     {
-                        Debug.Log("Synthetiseur fermé!");
                         synthetiseur.CloseSynthetiseur();
                     }
                 }
@@ -263,5 +260,35 @@ public class PlayerMovement : MonoBehaviour
     public void PauseGame()
     {
         paused = !paused;
+    }
+    public int GetH() => H;
+    public int GetN() => N;
+    public int GetC() => C;
+    public int GetO() => O;
+
+    public void RemoveH()
+    {
+        H--;
+        HText.text = H.ToString();
+    }
+    public void RemoveN()
+    {
+        N--;
+        NText.text = N.ToString();
+    }
+    public void RemoveC()
+    {
+        C--;
+        CText.text = C.ToString();
+    }
+    public void RemoveO()
+    {
+        O--;
+        OText.text = O.ToString();
+    }
+
+    void UpdateSacUI()
+    {
+        sacui.Refresh(H, N, C, O);
     }
 }

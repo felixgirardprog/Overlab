@@ -6,6 +6,8 @@ public class VaisseauAnim : MonoBehaviour
     private Animator animator;
     public GameObject menu_anim;
     private Animator menuanimator;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,8 +20,11 @@ public class VaisseauAnim : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.V))
         {
+            
             animator.SetTrigger("part");
             menuanimator.SetTrigger("part");
+
+
         }
     }
 }

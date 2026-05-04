@@ -10,17 +10,6 @@ public class Synthetiseur : MonoBehaviour
     public GameObject commande_vaisseau;
     public GameObject commande_vaisseau_menu;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void OpenSynthetiseur()
     {
         chrono.SetActive(false);

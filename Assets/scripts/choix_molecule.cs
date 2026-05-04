@@ -48,7 +48,7 @@ public class choix_molecule : MonoBehaviour
 
     public void AfficherMolecule(Molecule molecule)
     {
-        molecule_name.text = molecule.moleculeName;
+        molecule_name.text = molecule.moleculeName + "(" + molecule.chemicalFormula + ")";
         molecule_formula.text = molecule.chemicalFormula;
     }
 
