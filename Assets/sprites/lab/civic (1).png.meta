@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      civic (1)_0: -6589058867780688074
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

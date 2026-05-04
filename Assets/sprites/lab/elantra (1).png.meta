@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      elantra (1)_0: -8229615056139128241
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

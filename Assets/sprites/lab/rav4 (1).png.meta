@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      rav4 (1)_0: -4487042359705330523
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      acura (1)_0: -2129594812300692787
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

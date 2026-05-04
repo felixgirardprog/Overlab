@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      corolla_0: 1494900807988474402
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
