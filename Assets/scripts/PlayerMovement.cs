@@ -46,6 +46,17 @@ public class PlayerMovement : MonoBehaviour
     public choix_molecule script_choix_molecule;// objet du script de choix de molecule pour choisir la molecule à synthetiser et l'afficher dans les menus
     private Molecule molecule_a_synthetiser;//variable pour stocker la molecule à synthétiser choisie au hazard par le script de choix de molecule
     public GameObject commande_vaisseau_menu;// objet du menu de commande du vaisseau pour le désactiver à la mort du joueur
+    public int maxAtomes = 20;
+    public int maxMolecules = 10;
+    public bool invOpened = false;// variable pour savoir si l'inventaire est ouvert ou pas (pour eviter de l'ouvrir plusieurs fois)
+    public GameObject inventoryUI;// objet de l'UI de l'inventaire pour l'ouvrir et le fermer
+    public GameObject invbox;// objet de la boite d'inventaire pour faire spawn les molecules dedans
+    public GameObject togglePrefab;// objet du toggle pour afficher les molecules à synthétiser dans l'inventaire
+    public TMP_Text nameDescrition;
+    public TMP_Text moleculeDescrition;
+    public bool firstStrart = false;
+    public VaisseauAnim vaisseauAnim;
+    public MoleculeZone moleculeZone;
     Vector2 playerDirection;
 
     // Start est appelé avant la première frame update
@@ -63,18 +74,24 @@ public class PlayerMovement : MonoBehaviour
         bouton1Anim = bouton1.GetComponent<Animator>();
         SimpleTimer timer = timerObject.GetComponent<SimpleTimer>();
         animateur = playerAnim.GetComponent<Animator>();
+        firstStrart = true;
     }
 
     // Update est appelé une fois par frame
     void Update()
     {
+        if (firstStrart)
+        {
+            molecule_a_synthetiser = script_choix_molecule.MoleculeChoisie(timer.GetComponent<SimpleTimer>().GetTotalSeconds());
+            script_choix_molecule.AfficherMolecule(molecule_a_synthetiser);
+            firstStrart = false;
+        }
         //mort
         if (Energy <= 0 && !isDead)
         {
             isDead = true;
             synthetiseur.CloseSynthetiseur();
             commande_vaisseau_menu.SetActive(false);
-            Debug.Log("Game Over! Energy depleted.");
             timer.GetComponent<SimpleTimer>().playing = false;
             float gameTime = timer.GetComponent<SimpleTimer>().GetTime();
             int minutes = (int)(gameTime / 60f);
@@ -100,20 +117,17 @@ public class PlayerMovement : MonoBehaviour
             {
                 Energy += maxEnergy * 0.3f;
                 Energy = Mathf.Clamp(Energy, 0, maxEnergy);
-                Debug.Log("Energy increased by 30% to: " + (Energy / maxEnergy * 100) + "%"); // Affiche le pourcentage d'énergie actuel dans la console
             }
 
             if (Input.GetKeyDown(KeyCode.O))
             {
                 Energy -= maxEnergy * 0.3f;
                 Energy = Mathf.Clamp(Energy, 0, maxEnergy);
-                Debug.Log("Energy decreased by 30% to: " + (Energy / maxEnergy * 100) + "%"); // Affiche le pourcentage d'énergie actuel dans la console
             }
 
             if (Input.GetKeyDown(KeyCode.C))
             {
                 molecule_a_synthetiser = script_choix_molecule.MoleculeChoisie(timer.GetComponent<SimpleTimer>().GetTotalSeconds());
-                Debug.Log("Molecule choisie: " + molecule_a_synthetiser.moleculeName);
                 script_choix_molecule.AfficherMolecule(molecule_a_synthetiser);
             }
         
@@ -132,60 +146,61 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-            
 
 
 
-            //trait d'action devans le joueur et mouvement
-            float xInput = Input.GetAxis("Horizontal");
-            float yInput = Input.GetAxis("Vertical");
-
-
-            if (Mathf.Abs(xInput) > 0.2 && !paused)
+            if (!isSynthetiseurOpen && !isDead)
             {
-                body.linearVelocity = new Vector2(xInput * movespeed, body.linearVelocity.y);
-            }
-
-            if (Mathf.Abs(yInput) > 0.2 && !paused)
-            {
-                body.linearVelocity = new Vector2(body.linearVelocity.x, yInput * movespeed);
-            }
+                //trait d'action devans le joueur et mouvement
+                float xInput = Input.GetAxis("Horizontal");
+                float yInput = Input.GetAxis("Vertical");
 
 
+                if (Mathf.Abs(xInput) > 0.2 && !paused)
+                {
+                    body.linearVelocity = new Vector2(xInput * movespeed, body.linearVelocity.y);
+                }
 
-            if (Mathf.Abs(xInput) > 0.2 || Mathf.Abs(yInput) > 0.2)
-            {
-                animateur.SetBool("walk", true);
-                animateur.SetBool("idle", false);
-            }
-            else
-            {
-                animateur.SetBool("walk", false);
-                animateur.SetBool("idle", true);
-            }
-            
+                if (Mathf.Abs(yInput) > 0.2 && !paused)
+                {
+                    body.linearVelocity = new Vector2(body.linearVelocity.x, yInput * movespeed);
+                }
 
-            if (xInput > 0.2 && !paused)
-            {
-                playerDirection = new Vector2(1, 0);
-                animateur.SetBool("right", true);
-                animateur.SetBool("left", false);
-            }
-            else if (xInput < -0.2 && !paused)
-            {
-                playerDirection = new Vector2(-1, 0);
-                animateur.SetBool("right", false);
-                animateur.SetBool("left", true);
-            }
-            else if (yInput > 0.2 && !paused)
-            {
-                playerDirection = new Vector2(0, 1);
-            }
-            else if (yInput < -0.2 && !paused)
-            {
-                playerDirection = new Vector2(0, -1);
-            }
 
+
+                if (Mathf.Abs(xInput) > 0.2 || Mathf.Abs(yInput) > 0.2)
+                {
+                    animateur.SetBool("walk", true);
+                    animateur.SetBool("idle", false);
+                }
+                else
+                {
+                    animateur.SetBool("walk", false);
+                    animateur.SetBool("idle", true);
+                }
+
+
+                if (xInput > 0.2 && !paused)
+                {
+                    playerDirection = new Vector2(1, 0);
+                    animateur.SetBool("right", true);
+                    animateur.SetBool("left", false);
+                }
+                else if (xInput < -0.2 && !paused)
+                {
+                    playerDirection = new Vector2(-1, 0);
+                    animateur.SetBool("right", false);
+                    animateur.SetBool("left", true);
+                }
+                else if (yInput > 0.2 && !paused)
+                {
+                    playerDirection = new Vector2(0, 1);
+                }
+                else if (yInput < -0.2 && !paused)
+                {
+                    playerDirection = new Vector2(0, -1);
+                }
+            }
             RaycastHit2D hitObstacle = Physics2D.Raycast(obstacleRayObject.transform.position, playerDirection, obstaclerayDistance, layerMask);
             if (hitObstacle.collider != null)
             {
@@ -195,15 +210,25 @@ public class PlayerMovement : MonoBehaviour
             {
                 Debug.DrawRay(obstacleRayObject.transform.position, obstaclerayDistance * playerDirection, Color.green);
             }
-
-
-
+            
 
             // interraction avec l'objet en face du joueur
             if (Input.GetKeyDown(KeyCode.E))
                 {
                     onInteract(hitObstacle);
                 }
+
+            // ouverture de l'inventaire
+            if (Input.GetKeyDown(KeyCode.I) && !invOpened)
+            {
+                invOpened = !invOpened;
+                OpenInventory();
+            }
+            else if (Input.GetKeyDown(KeyCode.I) && invOpened)
+            {
+                invOpened = !invOpened;
+                CloseInventory();
+            }
         }
 
 
@@ -216,46 +241,61 @@ public class PlayerMovement : MonoBehaviour
         if (hitObstacle.collider != null)
         {
 
-                // interraction avec les éléments collectables (H, N, C, O)
-                if (hitObstacle.collider.gameObject.name[0] == 'H')
+            // interraction avec les éléments collectables (H, N, C, O)
+            if (hitObstacle.collider.gameObject.name[0] == 'H' && H < maxAtomes)
+            {
+                H++;
+                HText.text = H.ToString();
+                sacui.Refresh(H, N, C, O);
+            }
+            else if (hitObstacle.collider.gameObject.name[0] == 'N' && N < maxAtomes)
+            {
+                N++;
+                NText.text = N.ToString();
+                sacui.Refresh(H, N, C, O);
+            }
+            else if (hitObstacle.collider.gameObject.name[0] == 'C' && C < maxAtomes)
+            {
+                C++;
+                CText.text = C.ToString();
+                sacui.Refresh(H, N, C, O);
+            }
+            else if (hitObstacle.collider.gameObject.name[0] == 'O' && O < maxAtomes)
+            {
+                O++;
+                OText.text = O.ToString();
+                sacui.Refresh(H, N, C, O);
+            }
+            else if (hitObstacle.collider.gameObject.name[0] == 'S')
+            {
+                isSynthetiseurOpen = !isSynthetiseurOpen;
+                if (isSynthetiseurOpen)
                 {
-                    H++;
-                    HText.text = H.ToString();
-                    sacui.Refresh(H, N, C, O);
-                }
-                else if (hitObstacle.collider.gameObject.name[0] == 'N')
-                {
-                    N++;
-                    NText.text = N.ToString();
-                    sacui.Refresh(H, N, C, O);
-                }
-                else if (hitObstacle.collider.gameObject.name[0] == 'C')
-                {
-                    C++;
-                    CText.text = C.ToString();
-                    sacui.Refresh(H, N, C, O);
-                }
-                else if (hitObstacle.collider.gameObject.name[0] == 'O')
-                {
-                    O++;
-                    OText.text = O.ToString();
-                    sacui.Refresh(H, N, C, O);
-                }
-                else if (hitObstacle.collider.gameObject.name[0] == 'S')
-                {
-                    isSynthetiseurOpen = !isSynthetiseurOpen;
-                    if (isSynthetiseurOpen)
-                    {
 
-                        synthetiseur.OpenSynthetiseur();
-                    }
-                    else
+                    synthetiseur.OpenSynthetiseur();
+                }
+                else
+                {
+                    synthetiseur.CloseSynthetiseur();
+                }
+            }
+            else if (hitObstacle.collider.gameObject.name[0] == 'R')
+            {
+                foreach (Moleculeobject molecule in inv_molecule)
+                {
+                    if (molecule.GetName() == molecule_a_synthetiser.moleculeName)
                     {
-                        synthetiseur.CloseSynthetiseur();
+                        molecule_a_synthetiser = script_choix_molecule.MoleculeChoisie(timer.GetComponent<SimpleTimer>().GetTotalSeconds());
+                        script_choix_molecule.AfficherMolecule(molecule_a_synthetiser);
+                        Energy += maxEnergy * 0.3f;
+                        vaisseauAnim.LanceAnim();
+                        inv_molecule.Remove(molecule);
+                        Destroy(molecule);
+                        moleculeZone.RemoveMolecule(molecule.moleculeinfo);
+                        break;
                     }
                 }
-            
-            
+            }
         }
     }
 
@@ -297,10 +337,63 @@ public class PlayerMovement : MonoBehaviour
     public void AddMolecule(Moleculeobject molecule)
     {
         if (!(inv_molecule.Contains(molecule))) inv_molecule.Add(molecule);
+
+        if (inv_molecule.Count > maxMolecules)
+        {
+            inv_molecule.RemoveAt(0);
+        }
     }
 
     public void RemoveMolecule(Moleculeobject molecule)
     {
-        if (inv_molecule.Contains(molecule)) inv_molecule.Remove(molecule);
+        if (inv_molecule.Contains(molecule))
+        {
+            inv_molecule.Remove(molecule);
+            Destroy(molecule);
+
+            moleculeZone.RemoveMolecule(molecule.moleculeinfo);
+        }
+    }
+
+    public void OpenInventory()
+    {
+        inventoryUI.SetActive(true);
+
+        // Delete old toggles
+        foreach (Transform child in invbox.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
+        // Create one toggle per molecule
+        foreach (Moleculeobject molecule in inv_molecule)
+        {
+            GameObject toggleObject = Instantiate(togglePrefab, invbox.transform);
+
+            Toggle toggle = toggleObject.GetComponent<Toggle>();
+
+            toggle.group = invbox.GetComponent<ToggleGroup>();
+
+            toggle.isOn = false;
+
+            // Set the visible text of the toggle
+            TMP_Text toggleText = toggleObject.GetComponentInChildren<TMP_Text>();
+            toggleText.text = molecule.GetChemicalFormula();
+
+            // Add click event
+            toggle.onValueChanged.AddListener((isOn) =>
+            {
+                if (isOn)
+                {
+                    nameDescrition.text = molecule.GetName() + "(" + molecule.GetChemicalFormula() + ")";
+                    moleculeDescrition.text = molecule.GetDescription();
+                }
+            });
+        }
+    }
+
+    public void CloseInventory()
+    {
+        inventoryUI.SetActive(false);
     }
 }

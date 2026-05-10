@@ -25,8 +25,6 @@ public class CrerMolecule : MonoBehaviour
         }
         synthZone.ClearAtoms(); // Vide la liste des atomes dans la zone pour préparer la prochaine synthèse
 
-        Debug.Log("Création de molécule:");
-        Debug.Log("Recherche de molécule pour H:"+currentAtoms.Hydrogen+" O:"+currentAtoms.Oxygene+" C:"+currentAtoms.Carbone+" N:"+currentAtoms.Azote);
         Molecule currentmolecule = FindMatchingMolecule(currentAtoms);
         zoneMolecule.SpawnMolecul(currentmolecule);
         currentAtoms.clear(); // Réinitialise les compteurs d'atomes pour la prochaine synthèse
@@ -42,16 +40,11 @@ public class CrerMolecule : MonoBehaviour
                 currentAtoms.Carbone == molecule.carbone &&
                 currentAtoms.Azote == molecule.azote)
             {
-                Debug.Log("Molecule trouvée: " + molecule.moleculeName);
                 MoleculeExistante = true;
                 return molecule;
             }
         }
 
-        if (!MoleculeExistante)
-        {
-            Debug.Log("Aucune molécule correspondante trouvée.");
-        }
 
         return null;
     }
