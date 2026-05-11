@@ -41,7 +41,6 @@ public class Pause : MonoBehaviour
         // Gestion des autres composants
         if (paused)
         {
-            Debug.Log("Game Paused");
             timer.GetComponent<SimpleTimer>().pauseTimer();
             player.GetComponent<PlayerMovement>().PauseGame();
             animateurmenu.SetBool("Pause", true); // Assurez-vous d'avoir un trigger "Pause" dans votre Animator pour le menu de pause
@@ -49,7 +48,6 @@ public class Pause : MonoBehaviour
         }
         else
         {
-            Debug.Log("Game Resumed");
             timer.GetComponent<SimpleTimer>().resumeTimer();
             player.GetComponent<PlayerMovement>().PauseGame();
             animateurmenu.SetBool("Pause", false);
@@ -63,7 +61,6 @@ public class Pause : MonoBehaviour
         {
             monImage.SetActive(false);
         }
-        Debug.Log("Game Resumed");
         timer.GetComponent<SimpleTimer>().resumeTimer();
         player.GetComponent<PlayerMovement>().PauseGame();
         animateurmenu.SetBool("Pause", false);

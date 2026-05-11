@@ -6,6 +6,8 @@ public class VaisseauAnim : MonoBehaviour
     private Animator animator;
     public GameObject menu_anim;
     private Animator menuanimator;
+    public Animator menutextone;
+    public Animator menutexttwo;
 
     public float chanceShipA = 50f;
     public bool dodge = false;
@@ -45,10 +47,7 @@ public class VaisseauAnim : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.V))
         {
-            float rand = Random.Range(0f, 100f);
-            dodge = rand < chanceShipA;
-
-            StartCoroutine(SwitchShip());
+            LanceAnim();
         }
     }
 
@@ -56,6 +55,8 @@ public class VaisseauAnim : MonoBehaviour
     {
         animator.SetTrigger("part");
         menuanimator.SetTrigger("part");
+        menutextone.SetTrigger("part");
+        menutexttwo.SetTrigger("part");
 
         // Attendre la durée réelle de l'animation
         yield return new WaitForSeconds(partDuration);
@@ -92,5 +93,13 @@ public class VaisseauAnim : MonoBehaviour
         }
 
         sr.sprite = shipSpace;
+    }
+
+    public void LanceAnim()
+    {
+        float rand = Random.Range(0f, 100f);
+        dodge = rand < chanceShipA;
+
+        StartCoroutine(SwitchShip());
     }
 }

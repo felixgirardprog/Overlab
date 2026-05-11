@@ -31,8 +31,6 @@ public class choix_molecule : MonoBehaviour
 
             difficulty_modifier_max = Mathf.Clamp01(time / 600f);
             difficulty_modifier_min = Mathf.Clamp01(time / 1200f);
-            Debug.Log("difficulty_modifier_max: " + difficulty_modifier_max);
-            Debug.Log("difficulty_modifier_min: " + difficulty_modifier_min);
 
         current_max = Mathf.RoundToInt(Mathf.Lerp(atome_min, atome_max, difficulty_modifier_max));
         current_min = Mathf.RoundToInt(Mathf.Lerp(atome_min, atome_max, difficulty_modifier_min));
