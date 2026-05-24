@@ -9,6 +9,7 @@ public class SynthZone : MonoBehaviour
     }
     public List<Atome> atomsInside = new List<Atome>();
     public PlayerMovement playerMovement;
+    public AudioManager audioManager;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -26,19 +27,6 @@ public class SynthZone : MonoBehaviour
                     case "N": playerMovement.RemoveN(); break;
                 }
             }
-            else
-            {
-            }
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        Atome atome = collision.GetComponent<Atome>();
-
-        if (atome != null)
-        {
-            atomsInside.Remove(atome);
         }
     }
 
@@ -62,16 +50,29 @@ public class SynthZone : MonoBehaviour
         if (atomsInside.Contains(atome))
         {
             atomsInside.Remove(atome);
+            switch (atome.atomeType)
+            {
+                case "H": playerMovement.AddH(); break;
+                case "O": playerMovement.AddO(); break;
+                case "C": playerMovement.AddC(); break;
+                case "N": playerMovement.AddN(); break;
+            }
         }
     }
 
     public void ClearAtoms()
     {
-    
+
         foreach (Atome atome in atomsInside)
         {
             atome.Delete();
         }
         atomsInside.Clear();
+    }
+
+    public void Delete()
+    {
+        ClearAtoms();
+        audioManager.Play(AudioManager.SoundType.Destroy);
     }
 }

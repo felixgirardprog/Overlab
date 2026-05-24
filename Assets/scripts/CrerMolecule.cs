@@ -9,6 +9,7 @@ public class CrerMolecule : MonoBehaviour
     public GameObject prefab_molecule;
     public PlayerMovement Player;
     public MoleculeZone zoneMolecule;
+    public AudioManager AudioManager;
     public void CreateMolecule()
     {
         InventaireSynthetiseur currentAtoms = gameObject.AddComponent<InventaireSynthetiseur>();
@@ -27,6 +28,14 @@ public class CrerMolecule : MonoBehaviour
 
         Molecule currentmolecule = FindMatchingMolecule(currentAtoms);
         zoneMolecule.SpawnMolecul(currentmolecule);
+        if (MoleculeExistante)
+        {
+            AudioManager.Play(AudioManager.SoundType.Create);
+        }
+        else
+        {
+            AudioManager.Play(AudioManager.SoundType.NotCreate);
+        }
         currentAtoms.clear(); // Réinitialise les compteurs d'atomes pour la prochaine synthèse
     }
 

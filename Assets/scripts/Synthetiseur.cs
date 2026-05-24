@@ -9,7 +9,7 @@ public class Synthetiseur : MonoBehaviour
     public GameObject menu;
     public GameObject commande_vaisseau;
     public GameObject commande_vaisseau_menu;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     public void OpenSynthetiseur()
     {
         chrono.SetActive(false);
@@ -30,6 +30,7 @@ public class Synthetiseur : MonoBehaviour
         commande_vaisseau_menu.SetActive(true);
         menu_synthetiseur.SetActive(false);
         menu.SetActive(false);
+
     }
 
 }

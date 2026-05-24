@@ -10,25 +10,17 @@ public class Pause : MonoBehaviour
     private Animator animateurmenu;
     public GameObject reprendrebutton;
     public Animator volume;
+    public GameObject slider;
 
     void Start()
     {
         // On s'assure que l'image est cachée au lancement du jeu
-        if (monImage != null) 
+        if (monImage != null)
             monImage.SetActive(false);
         animateurmenu = menupause.GetComponent<Animator>();
         paused = false; // Assurez-vous que le jeu commence en mode non-pausé
     }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            TogglePause();
-        }
-    }
-
-    void TogglePause()
+    public void TogglePause()
     {
         paused = !paused; // Alterne entre true et false
 
@@ -41,10 +33,12 @@ public class Pause : MonoBehaviour
         // Gestion des autres composants
         if (paused)
         {
+            ActivateSlider();
             timer.GetComponent<SimpleTimer>().pauseTimer();
             player.GetComponent<PlayerMovement>().PauseGame();
             animateurmenu.SetBool("Pause", true); // Assurez-vous d'avoir un trigger "Pause" dans votre Animator pour le menu de pause
             Time.timeScale = 0f; // Optionnel : fige physiquement le temps dans Unity
+            
         }
         else
         {
@@ -52,8 +46,19 @@ public class Pause : MonoBehaviour
             player.GetComponent<PlayerMovement>().PauseGame();
             animateurmenu.SetBool("Pause", false);
             Time.timeScale = 1f; // Relance le temps
+            DeactivateSlider();
         }
     }
+    public void DeactivateSlider()
+    {
+        slider.SetActive(false);
+    }
+
+    public void ActivateSlider()
+    {
+        slider.SetActive(true);
+    }
+
     public void Reprendre()
     {
         paused = false;

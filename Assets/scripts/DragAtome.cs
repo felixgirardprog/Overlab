@@ -26,5 +26,6 @@ public class DragAtome : DragAndDrop, IDragHandler, IBeginDragHandler, IEndDragH
                 synthZone.RemoveAtome(GetComponent<Atome>()); // Ajoute l'atome à la liste de la zone
             }
         }
+        audioManager.Play(AudioManager.SoundType.UnClick);
     }
 }

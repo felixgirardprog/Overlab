@@ -8,7 +8,9 @@ public class DragMolecule : DragAndDrop, IDragHandler, IBeginDragHandler, IEndDr
 {
     public RectTransform zoneRectTransform;
     public PlayerMovement player;
+    public MoleculeZone zonemolecule;
     public GameObject itself; // Référence à l'objet lui-même pour pouvoir le détruire
+
 
     public override void OnEndDrag(PointerEventData eventData)
     {
@@ -25,8 +27,10 @@ public class DragMolecule : DragAndDrop, IDragHandler, IBeginDragHandler, IEndDr
             else
             {
                 player.RemoveMolecule(GetComponent<Moleculeobject>());
+                zonemolecule.RemoveMolecule(GetComponent<Moleculeobject>().moleculeinfo);
                 Destroy(itself);
             }
         }
+        audioManager.Play(AudioManager.SoundType.UnClick);
     }
 }

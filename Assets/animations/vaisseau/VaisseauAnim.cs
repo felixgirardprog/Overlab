@@ -9,7 +9,7 @@ public class VaisseauAnim : MonoBehaviour
     public Animator menutextone;
     public Animator menutexttwo;
 
-    public float chanceShipA = 50f;
+    public float chanceShipA = 20f;
     public bool dodge = false;
 
     public Sprite shipA;
@@ -42,15 +42,6 @@ public class VaisseauAnim : MonoBehaviour
         choix();
         
     }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            LanceAnim();
-        }
-    }
-
     IEnumerator SwitchShip()
     {
         animator.SetTrigger("part");
@@ -63,11 +54,6 @@ public class VaisseauAnim : MonoBehaviour
 
         // Choisir le nouveau sprite
         choix();
-
-        
-
-        animator.SetTrigger("arrive");
-        menuanimator.SetTrigger("arrive");
     }
 
     void choix()

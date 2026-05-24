@@ -7,6 +7,7 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
 {
 
     private RectTransform _rectTransform;
+    public AudioManager audioManager;
     protected RectTransform rectTransform
     {
         get => _rectTransform;
@@ -33,11 +34,13 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
     public virtual void OnBeginDrag(PointerEventData eventData)
     {
         image.color = new Color32(255, 255, 255, 170); // couleur plus transparente pour indiquer que l'objet est en train d'être déplacé
+        audioManager.Play(AudioManager.SoundType.Click);
     }
 
     public virtual void OnEndDrag(PointerEventData eventData)
     {
         image.color = new Color32(255, 255, 255, 255); // couleur par défaut
+        audioManager.Play(AudioManager.SoundType.UnClick);
     }
 
     public void Delete()
