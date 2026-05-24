@@ -26,8 +26,8 @@ public class DragMolecule : DragAndDrop, IDragHandler, IBeginDragHandler, IEndDr
             }
             else
             {
-                player.RemoveMolecule(GetComponent<Moleculeobject>());
-                zonemolecule.RemoveMolecule(GetComponent<Moleculeobject>().moleculeinfo);
+                player.MoleculeDisapear(GetComponent<Moleculeobject>());
+                //zonemolecule.RemoveMolecule(GetComponent<Moleculeobject>().moleculeinfo);
                 Destroy(itself);
             }
         }

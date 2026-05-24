@@ -434,6 +434,15 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void MoleculeDisapear(Moleculeobject molecule)
+    {
+        if (inv_molecule.Contains(molecule))
+        {
+            Debug.Log("Removing molecule: " + molecule.GetName());
+            inv_molecule.Remove(molecule);
+        }
+    }
+
     public void OpenInventory()
     {
         inventoryUI.SetActive(true);
