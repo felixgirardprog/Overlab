@@ -31,6 +31,7 @@ public class CrerMolecule : MonoBehaviour
         if (MoleculeExistante)
         {
             AudioManager.Play(AudioManager.SoundType.Create);
+            Player.molecouille++;
         }
         else
         {

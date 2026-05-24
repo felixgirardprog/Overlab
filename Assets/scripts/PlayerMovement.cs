@@ -60,6 +60,8 @@ public class PlayerMovement : MonoBehaviour
     public AudioManager audioManager;
     public GameObject commandetext;
     public Pause pause;
+    public int atomouille;
+    public int molecouille;
     Vector2 playerDirection;
 
     // Start est appelé avant la première frame update
@@ -268,6 +270,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 audioManager.Play(AudioManager.SoundType.Pickup);
                 H++;
+                atomouille++;
                 HText.text = H.ToString();
                 sacui.Refresh(H, N, C, O);
             }
@@ -279,6 +282,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 audioManager.Play(AudioManager.SoundType.Pickup);
                 N++;
+                atomouille++;
                 NText.text = N.ToString();
                 sacui.Refresh(H, N, C, O);
             }
@@ -290,6 +294,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 audioManager.Play(AudioManager.SoundType.Pickup);
                 C++;
+                atomouille++;
                 CText.text = C.ToString();
                 sacui.Refresh(H, N, C, O);
             }
@@ -301,6 +306,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 audioManager.Play(AudioManager.SoundType.Pickup);
                 O++;
+                atomouille++;
                 OText.text = O.ToString();
                 sacui.Refresh(H, N, C, O);
             }
